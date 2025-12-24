@@ -2,7 +2,7 @@
 
 Easiest way to get your local website onto your phone
 
-![gif description](https://github.com/srivats22/VSQR/blob/main/assets/demo_vid.gif)
+![Demo](https://raw.githubusercontent.com/srivats22/vsqr/main/assets/demo_vid.gif)
 
 
 ## Features
