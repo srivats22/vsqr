@@ -1,8 +1,5 @@
 name: VSQR Deployer
-on:
-  push:
-    branches:
-      - main  # Runs every time you push to main
+on: workflow_dispatch
 
 jobs:
   build-and-publish:
