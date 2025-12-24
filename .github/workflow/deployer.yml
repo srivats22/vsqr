@@ -1,0 +1,20 @@
+name: VSQR Deployer
+on:
+  push:
+    branches:
+      - main  # Runs every time you push to main
+
+jobs:
+  build-and-publish:
+    runs-on: self-hosted  # <--- This forces it to run on your Raspberry Pi
+    steps:
+      - name: 1. Pull Latest Code
+        uses: actions/checkout@v4
+
+      - name: 2. Install Dependencies
+        run: npm install
+
+      - name: 3. Build & Publish
+        run: vsce publish -p ${{ secrets.DEPLOYMENT_KEY }}
+        env:
+          VSCE_PAT: ${{ secrets.DEPLOYMENT_KEY }}

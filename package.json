@@ -1,6 +1,8 @@
 {
   "name": "vsqr",
   "displayName": "VSQR",
+  "publisher": "Srivats",
+  "icon": "assets/logo_new.png",
   "description": "A VS Code Extension for creating QR code for local websites to view on your phone",
   "version": "1.0.0",
   "private": "true",
