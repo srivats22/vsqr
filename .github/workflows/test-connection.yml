@@ -13,9 +13,9 @@ jobs:
         run: vsce --version
 
       - name: 3. Verify Marketplace Auth
-        run: vsce verify-pat -p ${{ secrets.VSCE_PAT }}
+        run: vsce verify-pat -p ${{ secrets.DEPLOYMENT_KEY }}
         env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+          VSCE_PAT: ${{ secrets.DEPLOYMENT_KEY }}
 
       - name: 4. Success Message
         run: echo "The Raspberry Pi is connected and authorized to publish!"
