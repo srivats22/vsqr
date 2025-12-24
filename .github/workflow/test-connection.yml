@@ -1,0 +1,21 @@
+name: Connection Test
+on: 
+  workflow_dispatch: # This allows you to trigger it manually with a button
+
+jobs:
+  check-connection:
+    runs-on: self-hosted
+    steps:
+      - name: 1. Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 2. Verify vsce is installed
+        run: vsce --version
+
+      - name: 3. Verify Marketplace Auth
+        run: vsce verify-pat -p ${{ secrets.VSCE_PAT }}
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      - name: 4. Success Message
+        run: echo "The Raspberry Pi is connected and authorized to publish!"
